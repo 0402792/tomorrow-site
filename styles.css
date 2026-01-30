@@ -75,4 +75,14 @@ main > *:last-child{
 section{
   border-top: 1px solid var(--rule);
   padding-top: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+ul{
+  margin: 0 0 var(--space-2) 0;
+  padding-left: 1.25rem;
+}
+
+li{
+  margin-bottom: var(--space-1);
 }
