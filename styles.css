@@ -1,14 +1,78 @@
-* {
-  box-sizing: border-box;
+:root{
+  /* layout */
+  --max: 72ch;
+  --padX: 2rem;
+  --padY: 4rem;
+
+  /* type */
+  --font: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --base: 16px;
+  --lh: 1.6;
+
+  /* scale */
+  --h1: 2.25rem;
+  --h2: 1.25rem;
+  --small: 0.95rem;
+
+  /* rhythm */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+
+  /* colour */
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --rule: #e6e6e6;
 }
 
-body {
+*{ box-sizing: border-box; }
+
+body{
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font);
+  font-size: var(--base);
+  line-height: var(--lh);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-main {
-  max-width: 72ch;
-  padding: 4rem 2rem;
+main{
+  max-width: var(--max);
+  padding: var(--padY) var(--padX);
+}
+
+h1{
+  font-size: var(--h1);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3) 0;
+}
+
+h2{
+  font-size: var(--h2);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+  margin: var(--space-4) 0 var(--space-2) 0;
+}
+
+p{
+  margin: 0 0 var(--space-2) 0;
+}
+
+small{
+  font-size: var(--small);
+}
+
+main > *:last-child{
+  margin-bottom: 0;
+}
+
+section{
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
 }
